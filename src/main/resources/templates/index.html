@@ -19,7 +19,6 @@
                 </button>
                 <a class="navbar-brand" href="#">个人小窝</a>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-left">
                     <div class="form-group">
@@ -28,9 +27,9 @@
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">登录</a></li>
+                    <li><a href="https://github.com/login/oauth/authorize?client_id=cef88e2d34c239fa9426&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">奶油味拥抱<span class="caret"></span></a>
+                        <a th:href="${user}?${user.id}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:text="${user}?${user.name}">奶油味拥抱<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">消息中心</a></li>
                             <li><a href="#">个人资料</a></li>
